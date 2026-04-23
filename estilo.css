@@ -1,0 +1,295 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #222;
+    line-height: 1.6;
+}
+/*-----------------------------------*/
+.encabezado {
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.contenedor-header {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.logo i {
+    margin: 0 10px;
+    color: #f0b400;
+    font-size: 1em;
+}
+
+.subtitulo {
+    font-size: 1.2em;
+    color: #ccc;
+    font-weight: 300;
+    text-align: center;
+    margin: 0 auto;
+}
+/*--------------------------------------*/
+.navbar{
+    background-color: #222;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.6em;
+    transition: color 0.3s ease;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+}
+
+.nav-links li a:hover{
+    color: #00c4ff;
+}
+/*--------------------------------------*/
+main{
+    padding: 20px;
+}
+
+.seccion{
+    padding: 40px 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.seccion p {
+    max-width: 900px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+h2{
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p{
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+/*------------------------------------------*/
+.contenedor-misterios{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+.misterio-img-container{
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.misterio {
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.misterio:hover {
+    transform: translateY(-5px);
+}
+
+.misterio-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.resumen-hover{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    width: 100%;
+    padding: 15px;
+    max-height: 0;
+    overflow: auto;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+    box-sizing: border-box;
+}
+
+.misterio:hover .resumen-hover{
+    max-height: 200px;
+    opacity: 1;
+}
+
+.resumen-hover h3{
+    margin: 0 0 10px;
+    font-size: 1.2em;
+}
+
+.resumen-hover p{
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.descripcion{
+    padding: 15px;
+    font-size: 0.95em;
+    color: #444;
+}
+
+.boton-vermas{
+    display: inline-block;
+    text-align: center;
+    background-color: #f0b400;
+    color: #000;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.boton-vermas:hover{
+    background-color: #fff176;
+}
+/*--------------------------------------------*/
+.paginacion {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.paginacion a{
+    display: inline-block;
+    margin: 0 6px;
+    padding: 10px 15px;
+    background-color: #eee;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.paginacion a:hover{
+    background-color: #ccc;
+}
+/*--------------------------------------------*/
+#volver-arriba{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 15px;
+    font-size: 18px;
+    background-color: #f0b400;
+    color: #000;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 99;
+}
+
+#volver-arriba.mostrar{
+    opacity: 1;
+    visibility: visible;
+}
+/*--------------------------------------------*/
+@media (min-width: 1024px){
+    .contenedor-misterios{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedor-misterios{
+        grid-template-columns: repeat(2, 1fr);
+    }    
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #eee;
+    }
+
+    .encabezado {
+        background: linear-gradient(135deg, #000, #222);
+    }
+
+    .navbar {
+        background-color: #1a1a1a;
+    }
+
+    .navbar a,
+    .nav-links li a{
+        color: #ddd;
+    }
+
+    .misterio{
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .resumen-hover{
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #fff;
+    }
+
+    .boton-vermas{
+        background-color: #ffb300;
+        color: #000;
+    }
+
+    .boton-vermas:hover{
+        background-color: #fff176;
+    }
+}
