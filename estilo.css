@@ -259,7 +259,7 @@ p{
     }    
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) { /*modo oscuro*/
     body {
         background-color: #121212;
         color: #eee;
