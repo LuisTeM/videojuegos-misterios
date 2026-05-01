@@ -128,6 +128,9 @@ p{
     height: 250px;
     overflow: hidden;
     border-radius: 10px;
+    background-color: #1a1a1a;
+    animation: pulso-carga 2s infinite ease-in-out;
+    overflow: hidden; /* Mantiene la imagen dentro de los bordes redondeados */
 }
 
 .misterio {
@@ -236,7 +239,7 @@ p{
     border-radius: 50%; /* Lo hace un círculo perfecto */
     cursor: pointer;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Sombra para que flote */
-    z-index: 100;
+    z-index: 100; /*Se añade profundidad y se sobrepone a las tarjetas*/
     
     /* Centrar el icono de flecha */
     display: flex;
@@ -318,4 +321,11 @@ p{
     .boton-vermas:hover{
         background-color: #fff176;
     }
+}
+
+/* 1. Definimos la animación de "respiración" */
+@keyframes pulso-carga {
+    0% { background-color: #1a1a1a; } /* Casi negro */
+    50% { background-color: #333; }   /* Gris oscuro */
+    100% { background-color: #1a1a1a; }
 }
