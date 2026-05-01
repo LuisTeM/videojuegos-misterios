@@ -224,27 +224,46 @@ p{
     background-color: #ccc;
 }
 /*--------------------------------------------*/
-#volver-arriba{
+#volver-arriba {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    padding: 10px 15px;
-    font-size: 18px;
+    width: 55px; /* Tamaño un poco más grande para que se vea */
+    height: 55px;
     background-color: #f0b400;
-    color: #000;
+    color: #000; /* Flecha negra para contraste */
     border: none;
-    border-radius: 50%;
+    border-radius: 50%; /* Lo hace un círculo perfecto */
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Sombra para que flote */
+    z-index: 100;
+    
+    /* Centrar el icono de flecha */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Animaciones suaves */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    
+    /* Estado inicial (oculto) */
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease;
-    z-index: 99;
+    transform: translateY(20px); 
 }
 
-#volver-arriba.mostrar{
+/* Cuando el JavaScript añade la clase 'mostrar' */
+#volver-arriba.mostrar {
     opacity: 1;
     visibility: visible;
+    transform: translateY(0);
+}
+
+/* Efecto al pasar el mouse */
+#volver-arriba:hover {
+    background-color: #fff176; /* Un amarillo más brillante */
+    transform: scale(1.15) rotate(-5deg); /* Crece y se inclina un poquito */
+    box-shadow: 0 8px 20px rgba(240, 180, 0, 0.6); /* Brillo dorado */
 }
 /*--------------------------------------------*/
 @media (min-width: 1024px){
